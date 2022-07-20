@@ -1,4 +1,6 @@
 <?php 
+echo "Loading...";
+/*
 
 $login_padrao = $_SERVER['SERVER_NAME'];
 $login = explode(".", $login_padrao);

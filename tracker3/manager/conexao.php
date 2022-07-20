@@ -2,7 +2,7 @@
 session_start(); 
 $servidor = "localhost";
 $usuario = "root";
-$senha = "TR4vcijU6T9Keaw";
+$senha = "Murilo19781984";
 $dbname = "traccar";
 
 //Criar a conexao

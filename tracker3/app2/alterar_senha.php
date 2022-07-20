@@ -1,0 +1,56 @@
+  <?php
+header("Content-Type: text/html;  charset=ISO-8859-1",true);
+include_once('conexao.php');
+
+$date = date('Y-m-d');
+$hora = date('H:i:s');
+$user = $_POST['user_nome'];
+
+
+$id_push = $_POST['id_push2'];
+$senha = $_POST['senha'];
+$senha = md5($senha);
+$nova_senha = $_POST['nova_senha'];
+$nova_senha = md5($nova_senha);
+$id_usuarios = $_POST['id_usuarios2'];
+$todos = $_POST['todos'];
+
+
+  $cons_user1 = mysqli_query($conn,"SELECT * FROM usuarios WHERE id_usuarios='$id_usuarios' ");
+	if(mysqli_num_rows($cons_user1) > 0){
+		while ($resp_user1 = mysqli_fetch_assoc($cons_user1)) {
+		$senha_atual = 	$resp_user1['senha'];
+
+	}}	
+
+if($senha != $senha_atual){
+
+	echo '<script>
+		top.location="perfil.php?id='.$id_push.'&psw=error"
+	  </script>';
+
+}
+
+if($senha == $senha_atual){
+	$sql = mysqli_query($conn, "UPDATE usuarios SET senha='$nova_senha' WHERE id_usuarios='$id_usuarios'");
+	
+	if($todos == 'SIM'){
+		$sql = mysqli_query($conn, "UPDATE usuarios_push SET logado='NAO' WHERE id_usuarios='$id_usuarios' AND id_push != '$id_push'");
+	}
+	
+	
+	echo '<script>
+		top.location="perfil.php?id='.$id_push.'&psw=ok"
+	  </script>';
+}
+
+
+
+
+
+
+
+
+
+
+?>

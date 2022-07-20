@@ -1,5 +1,5 @@
 <?php 
-/*
+
 $login_padrao = $_SERVER['SERVER_NAME'];
 $login = explode(".", $login_padrao);
 $login_padrao = $login[0];
@@ -8,6 +8,8 @@ $servidor = "localhost";
 $usuario = "root";
 $senha = "Murilo19781984";
 $dbname = "traccar";
+
+
 
 //Criar a conexao
 $conn = mysqli_connect($servidor, $usuario, $senha, $dbname);
@@ -32,7 +34,7 @@ $cons_cli = mysqli_query($conn,"SELECT * FROM clientes WHERE subdominio='$login_
 		while ($resp_cor = mysqli_fetch_assoc($cons_cli)) {
 		$logo = 	'/tracker3/manager/logos/'.$resp_cor['logo'];
 
-	}}*/
+	}}
 
 ?>
 

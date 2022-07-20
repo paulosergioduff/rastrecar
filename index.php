@@ -10,7 +10,7 @@ $senha = "Murilo19781984";
 $dbname = "traccar";
 
 
-
+/*
 //Criar a conexao
 $conn = mysqli_connect($servidor, $usuario, $senha, $dbname);
 $con = mysqli_connect($servidor, $usuario, $senha, $dbname);
@@ -25,7 +25,7 @@ $texto_rodape = $resp_empresa['texto_rodape'];
 $texto_topo = $resp_empresa['texto_topo'];
 $cor_sistema = $resp_empresa['cor_sistema'];
 	}}
-/*
+
 $cons_cli = mysqli_query($conn,"SELECT * FROM clientes WHERE subdominio='$login_padrao' ORDER BY id_cliente ASC");
 	if(mysqli_num_rows($cons_cli) <= 0){
 		$logo = '/tracker3/manager/logos/'.$logo.'';

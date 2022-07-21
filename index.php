@@ -36,6 +36,12 @@ $cons_cli = mysqli_query($conn,"SELECT * FROM clientes WHERE subdominio='$login_
 
 	}}*/
 
+	$nome_url = "Rastrecar - Rastreamento de veículos";
+$logo = ra;
+$texto_rodape = "Rastrecar - Rastreamento de veículos";
+$texto_topo = "Rastrecar";
+$cor_sistema = "orange";
+
 ?>
 
 <!DOCTYPE html>
@@ -73,7 +79,7 @@ body{
         <div>
             <div>
 
-                <img src="<?php echo $logo?>" style="width:80%; height:auto">
+                <img src="tracker3/manager/logos/rastrecar.png" style="width:80%; height:auto">
 
             </div><br>
             <h3><span style="color:#000"><b>SISTEMA DE GESTÃO DE VEÍCULOS</b></span></h3><br>
